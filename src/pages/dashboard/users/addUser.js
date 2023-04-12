@@ -55,22 +55,18 @@ const AddUser = () => {
       .number("Enter phone number")
       .required("Phone number is required"),
     userName: yup.string("Enter username").required("Username is required"),
-    // name: yup.string("Enter name").required("Name is required"),
     email: yup
       .string("Enter email address")
       .email("Enter a valid email")
       .required("Email is required"),
     // isEnabled: yup.string("true or false").required("An option is required"),
-    departmentId: yup
-      .string("Enter department name")
-      .required("Department name is required"),
-    // errorMsg: yup
-    //   .string("Enter error Message")
-    //   .required("Error message is required"),
-    jobTitle: yup.string("Enter job title").required("Job title is required"),
-    branchId: yup
-      .string("Enter branch name")
-      .required("Branch name is required"),
+    // departmentId: yup
+    //   .string("Enter department name")
+    //   .required("Department name is required"),
+    // jobTitle: yup.string("Enter job title").required("Job title is required"),
+    // branchId: yup
+    //   .string("Enter branch name")
+    //   .required("Branch name is required"),
     roleId: yup.string("Enter role name").required("Role is required"),
     // success: yup.string("true or false").required("An option is required"),
   });
@@ -84,12 +80,12 @@ const AddUser = () => {
       phoneNumber: "",
       userName: "",
       name: "",
-      email: "",
+      // email: "",
       // isEnabled: true,
-      departmentId: 0,
+      // departmentId: 0,
       // errorMsg: "",
-      jobTitle: "",
-      branchId: 0,
+      // jobTitle: "",
+      // branchId: 0,
       roleId: 0,
       // success: true,
     },
@@ -256,7 +252,7 @@ const AddUser = () => {
               helperText={formik.touched.userName && formik.errors.userName}
             />
             
-            {/* <TextField
+           {/* <TextField
               style={{ marginTop: "8px", marginBottom: "8px" }}
               fullWidth
               maxWidth="sm"
@@ -266,7 +262,7 @@ const AddUser = () => {
               onChange={formik.handleChange}
               error={formik.touched.email && Boolean(formik.errors.email)}
               helperText={formik.touched.email && formik.errors.email}
-            /> */}
+            />  */}
             <Autocomplete
               fullWidth
               // options={roles}
