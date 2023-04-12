@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bb9c26c1-2030-4764-a9b0-dca33786e4cf" name="Changes" comment="ADLogin Amendments">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DX5JHWtoxuwAzGsT6VKOIeZM8j" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Work/React Projects/sanlam-admin-portal/src/components&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2022.2.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\React Projects\sanlam-admin-portal\src\components" />
+      <recent name="D:\Work\React Projects\sanlam-admin-portal\src\pages\api\admin" />
+      <recent name="D:\Work\React Projects\sanlam-admin-portal\src\slices\admin" />
+      <recent name="D:\Work\React Projects\sanlam-admin-portal\src\theme" />
+      <recent name="D:\Work\React Projects\sanlam-admin-portal\src\components\@mui-components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\React Projects\sanlam-admin-portal\public\static" />
+      <recent name="D:\Work\React Projects\sanlam-admin-portal\src\components\dashboard\customers" />
+      <recent name="D:\Work\React Projects\sanlam-admin-portal\src\components\@dmt-components" />
+      <recent name="D:\Work\React Projects\sanlam-admin-portal\src" />
+      <recent name="D:\Work\React Projects\sanlam-admin-portal" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb9c26c1-2030-4764-a9b0-dca33786e4cf" name="Changes" comment="" />
+      <created>1660832515971</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660832515971</updated>
+      <workItem from="1660832517165" duration="8178000" />
+      <workItem from="1669622038588" duration="933000" />
+      <workItem from="1669623017962" duration="47523000" />
+      <workItem from="1669727010808" duration="1609000" />
+      <workItem from="1669793785549" duration="21826000" />
+      <workItem from="1670240763564" duration="2933000" />
+      <workItem from="1670246428728" duration="16448000" />
+      <workItem from="1670405014056" duration="19452000" />
+      <workItem from="1670998899283" duration="13073000" />
+      <workItem from="1671013469936" duration="268000" />
+      <workItem from="1671089687471" duration="1498000" />
+      <workItem from="1671109198509" duration="1570000" />
+      <workItem from="1671630732719" duration="1550000" />
+      <workItem from="1672985627702" duration="2303000" />
+      <workItem from="1673514130533" duration="2860000" />
+      <workItem from="1673849444546" duration="236000" />
+      <workItem from="1674097757233" duration="2436000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added Refresh Token Functionality">
+      <created>1670490168859</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670490168859</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added Export Functionality for applications">
+      <created>1671013716221</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671013716221</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ADLogin Amendments">
+      <created>1673522735081</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673522735081</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Refresh Token Functionality" />
+    <MESSAGE value="Added Export Functionality for applications" />
+    <MESSAGE value="ADLogin Amendments" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADLogin Amendments" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/dashboard/customers/customer-datagrid.js</url>
+          <line>23</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/pages/api/admin/customers.js</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
