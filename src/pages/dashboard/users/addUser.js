@@ -244,17 +244,6 @@ const AddUser = () => {
               error={formik.touched.password && Boolean(formik.errors.password)}
               helperText={formik.touched.password && formik.errors.password}
             />
-            {/* <TextField
-              style={{ marginTop: "8px", marginBottom: "8px" }}
-              fullWidth
-              maxWidth="sm"
-              label="Id"
-              name="id"
-              value={formik.values.id}
-              onChange={formik.handleChange}
-              error={formik.touched.id && Boolean(formik.errors.id)}
-              helperText={formik.touched.id && formik.errors.id}
-            /> */}
             <TextField
               style={{ marginTop: "8px", marginBottom: "8px" }}
               fullWidth
@@ -266,18 +255,8 @@ const AddUser = () => {
               error={formik.touched.userName && Boolean(formik.errors.userName)}
               helperText={formik.touched.userName && formik.errors.userName}
             />
+            
             {/* <TextField
-              style={{ marginTop: "8px", marginBottom: "8px" }}
-              fullWidth
-              maxWidth="sm"
-              label="Name"
-              name="name"
-              value={`${formik.values.firstName} ${formik.values.lastName}`}
-              onChange={formik.handleChange}
-              error={formik.touched.name && Boolean(formik.errors.name)}
-              helperText={formik.touched.name && formik.errors.name}
-            /> */}
-            <TextField
               style={{ marginTop: "8px", marginBottom: "8px" }}
               fullWidth
               maxWidth="sm"
@@ -287,81 +266,7 @@ const AddUser = () => {
               onChange={formik.handleChange}
               error={formik.touched.email && Boolean(formik.errors.email)}
               helperText={formik.touched.email && formik.errors.email}
-            />
-            {/* <Autocomplete
-              fullWidth
-              options={isEnabled}
-              value={getAutoCompleteValue(
-                isEnabled,
-                formik.values.isEnabled,
-                "value"
-              )}
-              getOptionLabel={(option) => option.name}
-              onChange={handleOnEnabled}
-              renderInput={(params) => (
-                <TextField
-                  fullWidth
-                  sx={{ marginTop: 2 }}
-                  {...params}
-                  label="Enabled"
-                />
-              )}
             /> */}
-            <Autocomplete
-              fullWidth
-              // options={departments}
-              value={getAutoCompleteValue(
-                departments,
-                formik.values.departmentId
-              )}
-              getOptionLabel={(option) => option.name}
-              onChange={handleOnDepartmentId}
-              renderInput={(params) => (
-                <TextField
-                  fullWidth
-                  sx={{ marginTop: 2 }}
-                  {...params}
-                  label="Department"
-                />
-              )}
-            />
-            {/* <TextField
-              style={{ marginTop: "8px", marginBottom: "8px" }}
-              fullWidth
-              maxWidth="sm"
-              label="Error Message"
-              name="errorMsg"
-              value={formik.values.errorMsg}
-              onChange={formik.handleChange}
-              error={formik.touched.errorMsg && Boolean(formik.errors.errorMsg)}
-              helperText={formik.touched.errorMsg && formik.errors.errorMsg}
-            /> */}
-            <TextField
-              style={{ marginTop: "8px", marginBottom: "8px" }}
-              fullWidth
-              maxWidth="sm"
-              label="Job title"
-              name="jobTitle"
-              value={formik.values.jobTitle}
-              onChange={formik.handleChange}
-              error={formik.touched.jobTitle && Boolean(formik.errors.jobTitle)}
-              helperText={formik.touched.jobTitle && formik.errors.jobTitle}
-            />
-            <Autocomplete
-              fullWidth
-              // options={branches}
-              value={getAutoCompleteValue(departments, formik.values.branchId)}
-              getOptionLabel={(option) => option.name}
-              onChange={handleOnBranchId}
-              renderInput={(params) => (
-                <TextField
-                  fullWidth
-                  sx={{ marginTop: 2 }}
-                  {...params}
-                  label="Branch"
-                />
-              )}
-            />
             <Autocomplete
               fullWidth
               // options={roles}
@@ -376,26 +281,7 @@ const AddUser = () => {
                   label="Role"
                 />
               )}
-            />
-            {/* <Autocomplete
-              fullWidth
-              options={success}
-              value={getAutoCompleteValue(
-                success,
-                formik.values.success,
-                "value"
-              )}
-              getOptionLabel={(option) => option.name}
-              onChange={handleOnSuccess}
-              renderInput={(params) => (
-                <TextField
-                  fullWidth
-                  sx={{ marginTop: 2 }}
-                  {...params}
-                  label="Success"
-                />
-              )}
-            /> */}
+            />            
 
             <MKButton sx={{ marginTop: "4px" }} type="submit" color="primary">
               Save
