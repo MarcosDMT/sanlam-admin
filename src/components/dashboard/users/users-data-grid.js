@@ -11,7 +11,7 @@ import { getAllUsers } from "../../../slices/users";
 import { useAuth } from "../../../hooks/use-auth";
 
 const UsersDataGrid = () => {
-  // const { users } = useSelector(({ users }) => users)
+  const { users } = useSelector(({ users }) => users)
   const dispatch = useDispatch();
   const authUser = useAuth();
 
@@ -26,7 +26,7 @@ const UsersDataGrid = () => {
   return (
     <>
       <DataGrid
-        // dataSource={users}
+        dataSource={users}
         allowColumnReordering={true}
         rowAlternationEnabled={true}
         showBorders={true}
@@ -36,7 +36,6 @@ const UsersDataGrid = () => {
         <SearchPanel visible={true} highlightCaseSensitive={true} />
         <Column dataField="firstName" caption="First Name" />
         <Column dataField="lastName" caption="Last Name" />
-        <Column dataField="branchName" caption="Branch" />
         <Column
           dataField="phoneNumber"
           caption="Contact"
@@ -44,7 +43,6 @@ const UsersDataGrid = () => {
           cssClass="bullet"
         />
         <Column dataField="email" caption="Email" cssClass="bullet" />
-        <Column dataField="departmentName" caption="Department" cssClass="bullet" />
         <Column dataField="roleName" caption="Role" cssClass="bullet" />
         <Toolbar>
           <Item location="before">

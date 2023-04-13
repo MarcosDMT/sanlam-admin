@@ -32,6 +32,7 @@ const AddUpdateRoleForm = props => {
 
                 if (res.success) {
                     toast.success('Role Created Successfully')
+                    helpers.resetForm();
                     await dispatch(getAllRoles(authUser));
                     onClose();
                 }
@@ -78,7 +79,7 @@ const AddUpdateRoleForm = props => {
                         />
 
                         <MKBox sx={{ display: 'flex', my:2, justifyContent: 'flex-end', alignItems: 'center'}}>
-                            <MKButton variant={'contained'} color={'primary'} type={'submit'}>
+                            <MKButton variant={'contained'} color={'primary'} type={'submit'} disabled={formik.isSubmitting}>
                                 Save
                             </MKButton>
                         </MKBox>

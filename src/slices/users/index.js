@@ -25,7 +25,7 @@ export const getAllUsers = (authUser) => async dispatch =>{
 
 export const createUser = (authUser,data) => async dispatch => {
     const response = await addUser(authUser,data)
-    console.log(response);
+    console.log("RESPONSE ",response);
     try {
         console.log(response.data);
         // dispatch(fetchSuccess(response.message));

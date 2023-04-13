@@ -21,7 +21,6 @@ const Roles = () => {
   const dispatch = useDispatch();
   const [openDialog, setOpenDialog] = useState(false);
   const { roles } = useSelector(({ roles }) => roles);
-  console.log("ROLES ", roles);
 
   const handleOnClose = () => {
     setOpenDialog(false);
@@ -66,10 +65,7 @@ const Roles = () => {
           </MKBox>
           <Card sx={{ p: 2 }}>
             <MKBox>
-              <RolesDataGrid
-                  data={roles}
-                handleOnAdd={handleOnAdd}
-              />
+              <RolesDataGrid data={roles} handleOnAdd={handleOnAdd} />
             </MKBox>
           </Card>
         </Container>
