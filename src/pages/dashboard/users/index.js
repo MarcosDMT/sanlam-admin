@@ -31,9 +31,9 @@ const Users = () => {
 };
 
 Users.getLayout = (page) => (
-  // <AuthGuard>
+  <AuthGuard>
   <DashboardLayout>{page}</DashboardLayout>
-  // </AuthGuard>
+  </AuthGuard>
 );
 
 export default Users;

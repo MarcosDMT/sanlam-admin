@@ -10,10 +10,13 @@ import MKButton from "../../@mui-components/button";
 import {toast} from "react-hot-toast";
 import {useAuth} from "../../../hooks/use-auth";
 import MKTypography from "../../@mui-components/typography";
+import { getAllPermissions } from '../../../slices/roles';
+
 
 const PermissionsForm = props => {
     const { role, open, onClose } = props;
-    // const { permissions } = useSelector(({ roles }) => roles);
+    const { permissions } = useSelector(({ roles }) => roles);
+    console.log("PERMISSIONS: " , permissions)
     const authUser = useAuth();
 
     const [selectedPerms, setSelectedPerms] = useState([]);
@@ -113,7 +116,7 @@ const PermissionsForm = props => {
                 <DialogTitle>Manage Permissions : {role?.name}</DialogTitle>
                 <DialogContent>
                     <MKBox>
-                        {/* {permissions.map(perm => {
+                        {permissions?.map(perm => {
                             let checked = false;
                             const index = selectedPerms.findIndex(item => item.mainMenuId === perm.id);
                             if (index !== -1){
@@ -137,7 +140,7 @@ const PermissionsForm = props => {
 
                                 </>
                             )
-                        })} */}
+                        })}
                     </MKBox>
                     <DialogActions>
                         <MKButton onClick={handleOnSavePermissions} variant={'contained'} color={'primary'}>

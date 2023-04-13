@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect,useCallback} from 'react';
 import dynamic from "next/dynamic";
 import {Column, Item, SearchPanel, Toolbar} from "devextreme-react/data-grid";
 
@@ -10,9 +10,10 @@ const DataGrid = dynamic(() => import("devextreme-react/data-grid"), {
     ssr: false,
 });
 const RolesDataGrid = props => {
-    const { data, handleOnAdd } = props;
+    const { handleOnAdd,data } = props;
     const [ selectedRole, setSelectedRole ] = useState(null);
     const [openDialog, setOpenDialog] = useState(false);
+
 
     const handleOnClose = () => {
         setOpenDialog(false);

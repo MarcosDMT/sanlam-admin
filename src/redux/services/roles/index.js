@@ -1,5 +1,5 @@
+import { APP_API_URL } from "../../../utils/api-endpoints";
 import useAxios from "../../../hooks/use-axios";
-import {APP_API_URL} from "../../../utils/api-endpoints";
 
 export const fetchRoles = (authUser) =>{
     return new Promise((resolve,reject) =>{
