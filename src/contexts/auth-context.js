@@ -3,6 +3,8 @@ import { createContext, useEffect, useReducer } from "react";
 import PropTypes from "prop-types";
 import {AUTH_REFRESH_TOKEN_KEY, AUTH_TOKEN_KEY} from "../utils/constants";
 import {authApi} from "../api-requests/auth-apis";
+import { getUserMenus } from "../slices/roles";
+import { useDispatch } from "react-redux";
 
 
 let ActionType;
@@ -58,6 +60,7 @@ export const AuthContext = createContext({
 export const AuthProvider = (props) => {
     const { children } = props;
     const [state, dispatch] = useReducer(reducer, initialState);
+    const reduxDispatch = useDispatch();
 
     useEffect(() => {
         const initialize = async () => {
@@ -79,6 +82,7 @@ export const AuthProvider = (props) => {
                             user,
                         },
                     });
+                    await reduxDispatch(getUserMenus({ logout, user}));
                 } else {
                     dispatch({
                         type: ActionType.INITIALIZE,
@@ -111,6 +115,8 @@ export const AuthProvider = (props) => {
             accessToken: userDetails.token,
             refreshToken: userDetails.refreshToken,
         }
+        console.log("DECODED ",decodedToken)
+        await reduxDispatch(getUserMenus({ logout, user}));
         localStorage.setItem(AUTH_TOKEN_KEY, userDetails.token);
         localStorage.setItem(AUTH_REFRESH_TOKEN_KEY, userDetails.refreshToken);
         dispatch({

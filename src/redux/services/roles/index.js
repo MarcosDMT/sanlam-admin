@@ -56,7 +56,7 @@ export  const fetchUserMenus = (authUser) => {
     return new Promise((resolve, reject) => {
         const axiosInstance = useAxios(authUser)
         const formData = {
-            userId: authUser.user?.userid,
+            userId: authUser.user?.nameid,
         }
         axiosInstance.post(APP_API_URL.GET_MENUS, formData)
             .then((res) =>{

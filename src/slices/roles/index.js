@@ -8,7 +8,7 @@ const initialState = {
     menus: [],
 }
 
-const branchSlice = createSlice({
+const roleSlice = createSlice({
     name: 'roles',
     initialState,
     reducers:{
@@ -23,7 +23,7 @@ const branchSlice = createSlice({
         }
     }
 })
-export const  { setRoles, setPermissions, setMenus } = branchSlice.actions;
+export const  { setRoles, setPermissions, setMenus } = roleSlice.actions;
 
 
 export const getAllRoles = (authUser) => async (dispatch) =>{
@@ -43,6 +43,6 @@ export const getUserMenus = (authUser) => async dispatch => {
 
 
 
-export default branchSlice.reducer;
+export default roleSlice.reducer;
 
 

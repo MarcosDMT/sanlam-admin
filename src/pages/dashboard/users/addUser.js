@@ -77,7 +77,6 @@ const AddUser = () => {
           ...values,
           name: values.firstName + " " + values.lastName,
         };
-        // const res = await dispatch(authUser, formData);
         const res = await addUser(authUser, formData)
 
         if (res?.success) {

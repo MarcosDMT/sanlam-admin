@@ -18,6 +18,9 @@ export const API_URL = {
   // USERS
   CREATE_USER: "/api/v1/adminusers/createuser",
   GET_USER: "/api/v1/adminusers/getusers",
+
+  GET_MENUS: 'api/v1/account/getmenus',
+
 };
 
 export const APP_API_URL = {
@@ -30,6 +33,8 @@ export const APP_API_URL = {
   /***************** ROLES APIS **********************/
   GET_ROLES: "/api/admin/roles",
   GET_PERMISSIONS: "/api/admin/roles/permissions",
+  GET_MENUS: '/api/admin/menus',
+
 
   /***************** USERS **********************/
   ADD_USER: "/api/admin/users",
