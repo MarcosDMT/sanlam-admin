@@ -4,7 +4,7 @@ export const API_URL = {
   //------------------------ Admin ----------------------//
   GET_CUSTOMERS: "/api/v1/Customer/Customers",
   GET_APPLICATIONS: "/api/v1/Customer/applications",
-  GET_CUSTOMER_APPLICATIONS: "/api/v1/Customer",
+  GET_CUSTOMER_APPLICATIONS: "/api/v1/customer",
   LOGIN: "/api/adlogin",
   REFRESH_TOKEN: "/api/refresh",
 

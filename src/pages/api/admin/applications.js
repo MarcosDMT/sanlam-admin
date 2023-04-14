@@ -42,7 +42,7 @@ export default async function handler(req, res) {
             };
             const body = req.body;
 
-            const URL = `${API_URL.GET_CUSTOMER_APPLICATIONS}/${body.applicationId}/download`;
+            const URL = `${API_URL.GET_CUSTOMER_APPLICATIONS}/${body.applicationId}/downloadold`;
             console.log(URL);
 
             await backendAxiosInstance.post(URL,{}, config).then(response => {
@@ -50,7 +50,6 @@ export default async function handler(req, res) {
 
             }).catch(e => {
                     res.status(e.response?.status ?? 500).json(e.response?.data)
-
                 }
             )
 
