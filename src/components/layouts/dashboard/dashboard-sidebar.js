@@ -56,7 +56,7 @@ export const DashboardSidebar = (props) => {
           height: "100%",
         }}
       >
-        <Box sx={{ height: 120 }}>
+        <Box sx={{ height: 50 }}>
           <Box
             sx={{
               p: 1,
@@ -80,7 +80,7 @@ export const DashboardSidebar = (props) => {
         </Box>
         <Scrollbar
           sx={{
-            height: "calc(100% - 120px)",
+            height: "calc(100% - 50px)",
             "& .simplebar-content": {
               height: "100%",
             },

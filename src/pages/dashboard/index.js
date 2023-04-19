@@ -75,9 +75,9 @@ const DashboardPage = () => {
 }
 
 DashboardPage.getLayout = (page) => (
-    // <AuthGuard>
+    <AuthGuard>
         <DashboardLayout>{page}</DashboardLayout>
-    // </AuthGuard>
+    </AuthGuard>
 );
 
 export default DashboardPage;

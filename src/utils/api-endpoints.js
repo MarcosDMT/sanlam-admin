@@ -5,6 +5,7 @@ export const API_URL = {
   GET_CUSTOMERS: "/api/v1/Customer/Customers",
   GET_APPLICATIONS: "/api/v1/Customer/applications",
   GET_CUSTOMER_APPLICATIONS: "/api/v1/customer",
+  GET_OTHER_DOCUMENTS: "/api/v1/customer",
   LOGIN: "/api/adlogin",
   REFRESH_TOKEN: "/api/refresh",
 
@@ -27,6 +28,7 @@ export const APP_API_URL = {
   //------------------------ Admin ----------------------//
   GET_CUSTOMERS: "/api/admin/customers",
   GET_APPLICATIONS: "/api/admin/applications",
+  GET_OTHER_DOCUMENTS: "/api/admin/application-attachment",
   LOGIN: "/api/admin/login",
   REFRESH_TOKEN: "/api/admin/refresh-token",
 

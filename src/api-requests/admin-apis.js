@@ -47,6 +47,17 @@ class AdminApis {
             })
         })
     }
+    downloadAttachment(applicationId, useAuth){
+        return new Promise ((resolve, reject) => {
+            const axiosInstance = useAxios(useAuth);
+            axiosInstance.post(APP_API_URL.GET_OTHER_DOCUMENTS,{applicationId}).then( response => {
+                resolve(response.data)
+            }).catch(e => {
+                reject(new Error(e.message))
+                console.log(e.message)
+            })
+        })
+    }
 }
 
 export const adminApis  = new AdminApis();
