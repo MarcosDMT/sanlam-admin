@@ -13,13 +13,19 @@ import {
   Paging,
   SearchPanel,
 } from "devextreme-react/data-grid";
-import { Chip, CircularProgress, IconButton, Tooltip,Button } from "@mui/material";
+import {
+  Chip,
+  CircularProgress,
+  IconButton,
+  Tooltip,
+  Button,
+} from "@mui/material";
 import { Download } from "@mui/icons-material";
 import { adminApis } from "../../../api-requests/admin-apis";
 import { useAuth } from "../../../hooks/use-auth";
 import useDownloader from "react-use-downloader";
 import { green } from "@mui/material/colors";
-
+import { toast } from 'react-hot-toast'
 
 const DownloadApplication = ({ data }) => {
   const auth = useAuth();
@@ -66,6 +72,57 @@ const DownloadApplication = ({ data }) => {
     </>
   );
 };
+const ApplicationDownload = ({ data }) => {
+  const auth = useAuth();
+  const { size, elapsed, percentage, download, cancel, error, isInProgress } =
+    useDownloader();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const getApplicationFile = async (applicationId) => {
+    setIsLoading(true);
+    try {
+      const res = await adminApis.applicationDownload(applicationId, auth);
+      console.log("RESPONSE ", res);
+      if (res.data.length > 0) {
+        const fileName = res.name + res.extension;
+        await download(res.data, fileName);
+        setIsLoading(false);
+      }else if(res.data.length <= 0){
+        toast.error('The document is empty!')
+        setIsLoading(false);
+      }
+    } catch (e) {
+      console.log(e);
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <>
+      <Tooltip title="Download">
+        <IconButton
+          disabled={isLoading}
+          onClick={(e) => getApplicationFile(data.id)}
+        >
+          <Download />
+          {isLoading && (
+            <CircularProgress
+              size={24}
+              sx={{
+                color: green[500],
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                marginTop: "-12px",
+                marginLeft: "-12px",
+              }}
+            />
+          )}
+        </IconButton>
+      </Tooltip>
+    </>
+  );
+};
 
 const DownloadAttachment = ({ data }) => {
   const auth = useAuth();
@@ -79,11 +136,11 @@ const DownloadAttachment = ({ data }) => {
     try {
       const res = await adminApis.downloadAttachment(applicationId, auth);
       const newArr = [];
-      const datum = res.forEach((item) => {
-        if (item.data.length > 0) {
+      res.forEach((item) => {
+        if (item.data !== null && item.data.length > 0) {
           let name = item.name;
           if (name.length === 0) {
-            item.name = "Test File";
+            item.name = "TestFile";
           }
           const imageData = item.data;
           const format = imageData.substring(
@@ -92,7 +149,7 @@ const DownloadAttachment = ({ data }) => {
           );
           item.extension = "." + format;
           newArr.push(item);
-         const fileName = item.name + item.extension;
+          const fileName = item.name + item.extension;
           download(item.data, fileName);
           setIsLoading(false);
         }
@@ -131,8 +188,6 @@ const DownloadAttachment = ({ data }) => {
     </>
   );
 };
-
-
 
 const ApplicationsDataGrid = (props) => {
   const { applications, viewOnly = false } = props;
@@ -238,6 +293,10 @@ const ApplicationsDataGrid = (props) => {
         <Column
           caption={"Document"}
           cellRender={(props) => <DownloadAttachment {...props} />}
+        />
+        <Column
+          caption={"Application"}
+          cellRender={(props) => <ApplicationDownload {...props} />}
         />
         <Paging defaultPageSize={20} />
         <Pager
