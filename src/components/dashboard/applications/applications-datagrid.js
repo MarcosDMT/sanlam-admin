@@ -25,7 +25,7 @@ import { adminApis } from "../../../api-requests/admin-apis";
 import { useAuth } from "../../../hooks/use-auth";
 import useDownloader from "react-use-downloader";
 import { green } from "@mui/material/colors";
-import { toast } from 'react-hot-toast'
+import { toast } from "react-hot-toast";
 
 const DownloadApplication = ({ data }) => {
   const auth = useAuth();
@@ -85,8 +85,8 @@ const ApplicationDownload = ({ data }) => {
         const fileName = res.name + res.extension;
         await download(res.data, fileName);
         setIsLoading(false);
-      }else if(res.data.length <= 0){
-        toast.error('The document is empty!')
+      } else if (res.data.length <= 0) {
+        toast.error("No document found!");
         setIsLoading(false);
       }
     } catch (e) {
@@ -133,30 +133,32 @@ const DownloadAttachment = ({ data }) => {
     try {
       const res = await adminApis.downloadAttachment(applicationId, auth);
       const newArr = [];
-      res.forEach((item) => {
-        if (item.data !== null && item.data.length > 0) {
-          let name = item.name;
-          if (name.length === 0) {
-            item.name = "TestFile";
+      if (res.length > 0) {
+        res.forEach((item) => {
+          if (item.data !== null && item.data.length > 0) {
+            let name = item.name;
+            if (name.length === 0) {
+              item.name = "TestFile";
+            }
+            const imageData = item.data;
+            const format = imageData.substring(
+              imageData.indexOf("/") + 1,
+              imageData.indexOf(";")
+            );
+            item.extension = "." + format;
+            newArr.push(item);
+            const fileName = item.name + item.extension;
+            download(item.data, fileName);
+            setIsLoading(false);
           }
-          const imageData = item.data;
-          const format = imageData.substring(
-            imageData.indexOf("/") + 1,
-            imageData.indexOf(";")
-          );
-          item.extension = "." + format;
-          newArr.push(item);
-          const fileName = item.name + item.extension;
-          download(item.data, fileName);
-          setIsLoading(false);
-        }
-      });
-      //   const fileName = datum.name + datum.extension;
-      //   await download(datum.data, fileName);
-      //   setIsLoading(false);
+        });
+      } else {
+        toast.error("No document found");
+      }
     } catch (e) {
       setIsLoading(false);
     }
+    setIsLoading(false);
   };
   return (
     <>
