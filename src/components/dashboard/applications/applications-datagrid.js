@@ -41,7 +41,6 @@ const DownloadApplication = ({ data }) => {
       await download(res.data, fileName);
       setIsLoading(false);
     } catch (e) {
-      console.log(e);
       setIsLoading(false);
     }
   };
@@ -82,7 +81,6 @@ const ApplicationDownload = ({ data }) => {
     setIsLoading(true);
     try {
       const res = await adminApis.applicationDownload(applicationId, auth);
-      console.log("RESPONSE ", res);
       if (res.data.length > 0) {
         const fileName = res.name + res.extension;
         await download(res.data, fileName);
@@ -92,7 +90,6 @@ const ApplicationDownload = ({ data }) => {
         setIsLoading(false);
       }
     } catch (e) {
-      console.log(e);
       setIsLoading(false);
     }
   };
@@ -158,7 +155,6 @@ const DownloadAttachment = ({ data }) => {
       //   await download(datum.data, fileName);
       //   setIsLoading(false);
     } catch (e) {
-      console.log(e);
       setIsLoading(false);
     }
   };
