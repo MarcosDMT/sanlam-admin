@@ -138,7 +138,7 @@ const DownloadAttachment = ({ data }) => {
           if (item.data !== null && item.data.length > 0) {
             let name = item.name;
             if (name.length === 0) {
-              item.name = "TestFile";
+              item.name = "DownloadFile";
             }
             const imageData = item.data;
             const format = imageData.substring(
